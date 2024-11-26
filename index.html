@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>min</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #dd9c9c, #055194, #ffb3c3);
+            font-family: 'Poppins', sans-serif;
+            color: #fff;
+        }
+
+        .container {
+            text-align: center;
+            background: rgba(101, 196, 225, 0.6);
+            padding: 2em;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        }
+       
+        h1 {
+            font-size: 3rem;
+            margin: 0;
+            letter-spacing: 2px;
+            text-shadow: black 1px 2px;
+        }
+
+        button {
+            margin-top: 20px;
+            background-color: #ff5177;
+            padding: 0.75em 2em;
+            border: none;
+            box-shadow: 0px 0px 2px 0px 0px;
+            border-radius: 30px;
+            font-size: 1rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            color: #fff;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        button:hover {
+            background-color: blueviolet;
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 id="result">------</h1> 
+        <button onclick="fun()">Generate otp</button>
+    </div>
+    <script>
+       function fun(){
+        let display = document.querySelector("h1");
+        let otp='';
+        for(i=0;i<6;i++){
+            //console.log(i);
+            otp+=Math.floor(Math.random()* 10);
+            result.innerHTML=otp;
+            //console.log(otp)
+        }
+
+        /*otp=Math.floor(Math.random()*10)
+        otp1=Math.floor(Math.random()*10)
+        otp2=Math.floor(Math.random()*10)
+        otp3=Math.floor(Math.random()*10)
+        otp4=Math.floor(Math.random()*10)
+        otp5=Math.floor(Math.random()*10)
+        let Generate=`${otp1}${otp}${otp2}${otp3}${otp4}${otp5}`*/
+        //result.innerHTML=Generate;
+       }
+       
+        let a=28345;
+        str=String(a);
+        min=str[0];
+        max=str[0];
+        minindex=0;
+        maxindex=0;
+        for(i of str){
+            if(min>i){
+                min=i;
+                minindex=i;
+            }
+            if(max<i){
+                max=i;
+                maxindex=i;
+            }
+        }
+        if(minindex<maxindex){
+            console.log("min is first");
+        }
+        else{
+            console.log("max is first")
+        }
+        console.log(min);
+       
+        
+        let b=8737
+        str1=String(b);
+        min=str1[0];
+        max=str1[0];
+        minindex=0;
+        maxindex=0;
+        for(i of str1){
+            if(min>str1[i]){
+                min=str1[i];
+                minindex=i;
+            }
+            if(max<str1[i]){
+                max=str1[i];
+                maxindex=i;
+            }
+        }
+        if(minindex<maxindex){
+            console.log("min is first");
+        }
+        else{
+            console.log("max is first")
+        }
+        console.log(max);
+
+
+
+    </script>
+</body>
+</html>
